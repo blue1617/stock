@@ -1,17 +1,19 @@
 package model;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
+ * This class describes a trade.
  * Created by apreda on 11.06.2016.
  */
 public class Trade {
 
     private Stock stock;
-    private Date timestamp;
+    private LocalDateTime timestamp;
     private double price;
     private long quantity;
-    private TradeType tradeType = TradeType.BUY;
+    private TradeType tradeType;
 
     public Stock getStock() {
         return stock;
@@ -21,11 +23,11 @@ public class Trade {
         this.stock = stock;
     }
 
-    public Date getTimestamp() {
+    public LocalDateTime getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Date timestamp) {
+    public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
     }
 
